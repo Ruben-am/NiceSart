@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="64dp"
+    android:background="@drawable/gradient"
+    tools:context=".SingUpActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gd_singup_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gd_singup_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <ImageView
+        android:id="@+id/iv_singup_logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_app_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_singup_user"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@id/gd_singup_end"
+        app:layout_constraintStart_toStartOf="@id/gd_singup_start"
+        app:layout_constraintTop_toBottomOf="@id/iv_singup_logo">
+
+        <EditText
+            android:id="@+id/et_singup_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.65"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_user"
+            android:hint="@string/et_login_user" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_singup_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@id/gd_singup_end"
+        app:layout_constraintStart_toStartOf="@id/gd_singup_start"
+        app:layout_constraintTop_toBottomOf="@id/til_singup_user"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/et_singup_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.65"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_password"
+            android:hint="@string/et_login_password" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_singup_passwordconfirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@id/gd_singup_end"
+        app:layout_constraintStart_toStartOf="@id/gd_singup_start"
+        app:layout_constraintTop_toBottomOf="@id/til_singup_password"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/et_singup_passwordconfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.65"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_password"
+            android:hint="@string/et_singup_passwordconfirm" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_singup_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/buttoncustom"
+        android:text="@string/btn_login_login"
+        android:textColor="@color/color_accent_text"
+        app:layout_constraintEnd_toEndOf="@id/gd_singup_end"
+        app:layout_constraintStart_toStartOf="@id/gd_singup_start"
+        app:layout_constraintTop_toBottomOf="@id/til_singup_passwordconfirm" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_singup_singup"
+        style="@style/ButtonOutline"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_login_singup"
+        app:layout_constraintEnd_toEndOf="@id/gd_singup_end"
+        app:layout_constraintStart_toStartOf="@id/gd_singup_start"
+        app:layout_constraintTop_toBottomOf="@id/btn_singup_login" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
