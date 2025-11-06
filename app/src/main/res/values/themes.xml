@@ -7,6 +7,10 @@
 
     <style name="Theme.NiceStart" parent="Base.Theme.NiceStart" />
     <style name="Theme.NiceStart.ActionBar" parent="Theme.Material3.DayNight">
-        <item name="android:windowIsTranslucent">true</item>
+        <item name="actionBarStyle">@style/TransparentActionBar</item>
+    </style>
+    <style name="TransparentActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="background">@color/color_transparent</item>
+        <item name="android:textColorPrimary">@color/white</item>
     </style>
 </resources>
