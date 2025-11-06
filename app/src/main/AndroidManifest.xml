@@ -13,10 +13,12 @@
         android:theme="@style/Theme.NiceStart" >
         <activity
             android:name=".SingUpActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:theme="@style/Theme.NiceStart.ActionBar"
+            android:parentActivityName=".LoginActivity"/>
         <activity
             android:name=".LoginActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
