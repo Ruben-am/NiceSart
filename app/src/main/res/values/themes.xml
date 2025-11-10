@@ -10,7 +10,9 @@
         <item name="actionBarStyle">@style/TransparentActionBar</item>
     </style>
     <style name="TransparentActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/white</item>
         <item name="background">@color/color_transparent</item>
+        <item name="displayOptions">showHome</item>
         <item name="android:textColorPrimary">@color/white</item>
     </style>
 </resources>

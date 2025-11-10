@@ -2,6 +2,7 @@ package com.rubenalba.nicestart;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,14 +22,15 @@ public class LoginActivity extends AppCompatActivity {
 
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        openMain();
     }
 
-    public void openMain() {
-        binding.btnLoginLogin.setOnClickListener(view -> {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-        });
+    public void openMain(View v) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void openSingUp(View v) {
+        Intent intent = new Intent(this, SingUpActivity.class);
+        startActivity(intent);
     }
 }
