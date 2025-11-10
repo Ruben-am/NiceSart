@@ -107,6 +107,7 @@
         app:layout_constraintTop_toBottomOf="@id/til_singup_passwordconfirm" />
 
     <com.google.android.material.button.MaterialButton
+        android:onClick="openMain"
         android:id="@+id/btn_singup_singup"
         style="@style/ButtonOutline"
         android:layout_marginTop="16dp"
