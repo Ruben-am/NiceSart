@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingVertical="64dp"
     android:background="@drawable/gradient"
+    android:paddingVertical="64dp"
     tools:context=".SingUpActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -97,23 +97,24 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_singup_login"
+        android:id="@+id/btn_singup_confirm"
         style="@style/ButtonDefault"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/buttoncustom"
-        android:text="@string/btn_login_login"
+        android:onClick="openMain"
+        android:text="@string/btn_singup_confirm"
         app:layout_constraintEnd_toEndOf="@id/gd_singup_end"
         app:layout_constraintStart_toStartOf="@id/gd_singup_start"
         app:layout_constraintTop_toBottomOf="@id/til_singup_passwordconfirm" />
 
     <com.google.android.material.button.MaterialButton
-        android:onClick="openMain"
-        android:id="@+id/btn_singup_singup"
+        android:onClick="openLogin"
+        android:id="@+id/btn_singup_cancel"
         style="@style/ButtonOutline"
         android:layout_marginTop="16dp"
-        android:text="@string/btn_login_singup"
+        android:text="@string/btn_singup_cancel"
         app:layout_constraintEnd_toEndOf="@id/gd_singup_end"
         app:layout_constraintStart_toStartOf="@id/gd_singup_start"
-        app:layout_constraintTop_toBottomOf="@id/btn_singup_login" />
+        app:layout_constraintTop_toBottomOf="@id/btn_singup_confirm" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
