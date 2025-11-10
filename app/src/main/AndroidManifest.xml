@@ -26,6 +26,8 @@
             </intent-filter>
         </activity>
         <activity
+            android:theme="@style/Theme.NiceStart.ActionBar"
+            android:parentActivityName=".LoginActivity"
             android:name=".MainActivity"
             android:exported="false" />
     </application>
