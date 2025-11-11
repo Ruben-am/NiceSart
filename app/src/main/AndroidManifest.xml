@@ -33,10 +33,6 @@
             android:exported="false"
             android:parentActivityName=".LoginActivity"
             android:theme="@style/Theme.NiceStart.ActionBar" />
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
