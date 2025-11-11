@@ -23,7 +23,8 @@
             android:src="@drawable/ic_app_logo"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/white" />
 
         <TextView
             android:layout_width="wrap_content"
