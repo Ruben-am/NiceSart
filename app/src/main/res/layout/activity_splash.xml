@@ -30,11 +30,11 @@
             android:id="@+id/iv_splash_logo"
             android:layout_width="128dp"
             android:layout_height="128dp"
-            android:src="@drawable/ic_app_logo"
+            android:src="@drawable/logovectorial_black"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:tint="@color/white" />
+            app:tint="@color/color_text_primary" />
 
         <TextView
             android:layout_width="wrap_content"
