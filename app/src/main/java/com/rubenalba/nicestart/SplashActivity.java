@@ -3,6 +3,8 @@ package com.rubenalba.nicestart;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,6 +23,9 @@ public class SplashActivity extends AppCompatActivity {
 
         binding = ActivitySplashBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.blink);
+        binding.ivSplashLogo.startAnimation(myAnim);
 
         Glide.with(this).load("https://wallpapers.com/images/hd/dark-ocean-938-x-1668-wallpaper-9q07z71hrfl8k5ty.jpg").centerCrop().into(binding.ivSplashBackground);
 
