@@ -40,6 +40,7 @@ android {
 }
 
 dependencies {
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
     implementation(libs.glide)
     annotationProcessor(libs.compiler)
     implementation(libs.appcompat)

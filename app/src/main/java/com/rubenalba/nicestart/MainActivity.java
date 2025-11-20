@@ -2,6 +2,7 @@ package com.rubenalba.nicestart;
 
 import android.os.Bundle;
 import android.view.ContextMenu;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
@@ -13,8 +14,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 public class MainActivity extends AppCompatActivity {
+
+    private SwipeRefreshLayout swipeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +27,18 @@ public class MainActivity extends AppCompatActivity {
 
         TextView mycontext = findViewById(R.id.mycontext);
         registerForContextMenu(mycontext);
+
+        swipeLayout = findViewById(R.id.sr_main_swipe);
+        swipeLayout.setOnRefreshListener(mOnRefreshListener);
     }
 
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         getMenuInflater().inflate(R.menu.menu_context, menu);
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_appbar, menu);
+        return true;
     }
 
     @Override
@@ -42,4 +54,15 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
+
+    protected  SwipeRefreshLayout.OnRefreshListener
+        mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
+        @Override
+        public void onRefresh() {
+            Toast toast0 = Toast.makeText(MainActivity.this, "Good job refreshing", Toast.LENGTH_LONG);
+            toast0.show();
+
+            swipeLayout.setRefreshing(false);
+        }
+    };
 }
