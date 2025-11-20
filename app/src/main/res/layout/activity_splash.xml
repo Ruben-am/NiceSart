@@ -27,6 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
+            android:layout_margin="16dp"
             android:id="@+id/iv_splash_logo"
             android:layout_width="128dp"
             android:layout_height="128dp"
@@ -37,6 +38,7 @@
             app:tint="@color/color_text_primary" />
 
         <TextView
+            android:layout_marginTop="32dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ar_one_sans"
