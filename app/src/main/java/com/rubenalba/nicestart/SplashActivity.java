@@ -19,7 +19,6 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
 
         binding = ActivitySplashBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -27,7 +26,10 @@ public class SplashActivity extends AppCompatActivity {
         Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.blink);
         binding.ivSplashLogo.startAnimation(myAnim);
 
-        Glide.with(this).load("https://wallpapers.com/images/hd/dark-ocean-938-x-1668-wallpaper-9q07z71hrfl8k5ty.jpg").centerCrop().into(binding.ivSplashBackground);
+        Glide.with(this)
+                .load("https://wallpapers.com/images/hd/dark-ocean-938-x-1668-wallpaper-9q07z71hrfl8k5ty.jpg")
+                .centerCrop()
+                .into(binding.ivSplashBackground);
 
         openMain();
     }
